@@ -41,5 +41,7 @@ pip install -r requirements.txt
 
 以hospital为例：python /example/hospital.py
 
+可在/example/hospital.py中对infer_strategy、model_choice等参数进行修改。
 
+可在/example/hospital.py中model_save_path添加路径，即可保存模型的pkl文件。
 
