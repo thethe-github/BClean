@@ -1,0 +1,1 @@
+{0: 'f_name', 1: 'l_name', 2: 'gender', 3: 'area_code', 4: 'phone', 5: 'city', 6: 'state', 7: 'zip', 8: 'marital_status', 9: 'has_child', 10: 'salary', 11: 'rate', 12: 'single_exemp', 13: 'married_exemp'}

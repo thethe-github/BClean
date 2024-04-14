@@ -1,0 +1,36 @@
+{
+
+    "Monthly Rent": {
+        "type": "Numerical",
+        "min_length": 0,
+        "max_length": 500,
+        "AllowNull": "N",
+        "repairable": "Y",
+        "pattern": null
+    },
+
+    "Room Type": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 300,
+        "AllowNull": "N",
+        "repairable": "N",
+        "pattern": null
+    },
+    "County": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 300,
+        "AllowNull": "N",
+        "repairable": "N",
+        "pattern": null
+    },
+    "State": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 200,
+        "AllowNull": "N",
+        "repairable": "Y",
+        "pattern": null
+    }
+}

@@ -1,0 +1,65 @@
+{
+
+    "f_name": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 300,
+        "AllowNull": "N",
+        "repairable": "Y",
+        "pattern": null
+    },
+
+    "l_name": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 300,
+        "AllowNull": "N",
+        "repairable": "Y",
+        "pattern": null
+    },
+
+    "gender": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 200,
+        "AllowNull": "N",
+        "repairable": "N",
+        "pattern": null
+    },
+
+    "city": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 300,
+        "AllowNull": "N",
+        "repairable": "Y",
+        "pattern": null
+    },
+
+    "state": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 300,
+        "AllowNull": "N",
+        "repairable": "Y",
+        "pattern": null
+    }, 
+
+    "marital_status": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 300,
+        "AllowNull": "N",
+        "repairable": "Y",
+        "pattern": null
+    }, 
+
+    "has_child": {
+        "type": "Categorical",
+        "min_length": 0,
+        "max_length": 300,
+        "AllowNull": "N",
+        "repairable": "Y",
+        "pattern": null
+    }
+}
