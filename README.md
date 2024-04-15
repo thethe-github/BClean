@@ -1,47 +1,52 @@
 # bayesclean
 
-#### 介紹
-BClean清洗系统的源代码，清洗流程图如下所示。
+#### Introduction
+Source code of BClean cleaning system. The cleaning process flowchart is shown below.
 
-![](https://gitee.com/wx_389ac836ab/bayesclean/raw/master/figure/overview.jpg)
+![](https://github.com/thethe-github/BClean/blob/master/img/overview.png)
 
-#### 模块介绍
+#### Module Introduction
 
-1. BClean文件，这是清洗系统的主文件，用于接收用户传递的参数，定义了核心的函数，包含结构生成、参数估计以及推理等调用函数，目的是调用各模块的核心类
-2. analysis文件，用于评估清洗结果的精确率、召回率以及运行时间
-3. src文件夹，包括用户约束（UC）类、贝叶斯网络结构类、补偿得分类、推理策略类等
-4. example文件夹，包含对每个数据集编写的BClean流程代码
-5. dataset数据集，存放测试数据集，其中真实数据集中有添加噪声的py文件
-6. baseline文件夹，存放对比方法源代码及其论文
+1. BClean file: This is the main file of the cleaning system, which receives user-defined parameters, defines core functions, including structure generation, parameter estimation, and inference, and calls core classes of various modules.
 
-#### 用户约束（UC）编写方式
-1. 初始化UC：
+2. Analysis file: Used to evaluate the precision, recall, and running time of the cleaning results.
+
+3. src folder: Includes User Constraint (UC) class, Bayesian Network Structure class, Compensation Classification, Inference Strategy class, etc.
+
+4. example folder: Contains BClean workflow code for each dataset.
+
+5. dataset folder: Stores test datasets, including py files with added noise in real datasets.
+
+6. baseline folder: Stores source code of comparison methods and their papers.
+
+#### User Constraint (UC) Writing Method
+1. Initialize UC:
 
 uc = UC(dirty_data)
 
-2. 查看每一列推荐的正则表达式：
+2. View the recommended regular expression for each column:
 
 uc.PatternDiscovery()
 
-3. 为特定属性定义UC的方式：
+3. Define UC for specific attributes:
 
 uc.build(attr = "birthyear", type = "Categorical", min_v = 4, max_v = 4, null_allow = "N", repairable = "Y", pattern = re.compile(r"([1][9][6-9][0-9])")) 
 
-4. 获得该数据的用户约束：
+4. Get the user constraints for the data:
 
 uc.get_uc()
 
-#### 使用教程
+#### User Guide
 
-1. 安装依赖（或在conda虚拟环境下） 
+1. Install dependencies (or in conda virtual environment):
 
 pip install -r requirements.txt
 
-2. 运行清洗（或在conda虚拟环境下） 
+2. Run the cleaning (or in conda virtual environment):
 
-以hospital为例，运行命令：  python /example/hospital.py
+Taking hospital as an example, run the command: python /example/hospital.py
 
-可在/example/hospital.py中对infer_strategy、model_choice等参数进行修改。
+You can modify parameters such as infer_strategy and model_choice in /example/hospital.py.
 
-在/example/hospital.py中model_save_path添加路径，即可保存模型的pkl文件。
+Add a path to model_save_path in /example/hospital.py to save the model's pkl file.
 
